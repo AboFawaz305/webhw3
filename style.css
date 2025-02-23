@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/** Set default font and color palette.
+* NOTE: :root selector represents the root element usually it is the html element
+*/
+:root {
+  font: 16pt "Doomie";
+  font: 16pt sans-serif;
+  --primary: #0B0B0B;
+  --secondary: #E0E0E0;
+  --tertiary: #999999;
+}
+
+:is(h1, h2, p::first-letter()) {
+  text-transform: capitalize;
+}
+
+h1 {
+  text-shadow: var(--primary) 1px 1px;
+}
+
+li {
+  list-style: square;
+}
+
+a {
+  color: var(--tertiary);
+}
+
+body {
+  margin: 0;
+  background: var(--primary);
+  color: var(--secondary);
+  /* Display the body as grid */
+  display: grid;
+  grid-template-rows: 1fr 12fr 1fr;
+  height: 100vh;
+}
+
+main {
+  padding: 0 2.4rem;
+  overflow: scroll;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  background: var(--secondary);
+  color: var(--primary);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+header img {
+  height: 32px;
+  align-self: center;
+}
+
+header * {
+  margin: 0;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+nav li {
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+
+nav li a {
+  flex: 1;
+  align-content: center;
+  padding: 0 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+nav li a:hover {
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: var(--secondary);
+  color: var(--primary);
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+}
+
+footer #contact-me {
+  flex: 1;
+}
+
+footer #contact-me ul {
+  margin: 0;
+}
+
+footer #contact-me ul li {
+  list-style: none;
+}
+
+footer #contact-me ul li a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+#top-button {
+  padding: 1.rem;
+  text-decoration: underline;
+  color: inherit;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20vw;
+  gap: 1rem;
+}
+
+form :is(input, textarea) {
+  width: 100%;
+  border-radius: .6rem;
+  background: var(--secondary);
+  color: var(--primary);
+  appearance: none;
+}
+
+form :is(input, textarea):focus() {
+  appearance: none;
+  font-family: inherit;
+}
+
+#submit {
+  width: 20%;
+  margin-left: 80%;
+}
