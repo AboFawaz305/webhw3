@@ -11,9 +11,9 @@
 :root {
   font: 16pt "Doomie";
   font: 16pt sans-serif;
-  --primary: #c1bf7d;
-  --secondary: #7d9fc1;
-  --tertiary: #9b7dc1;
+  --primary: #8668c8;
+  --secondary: #c88668;
+  --tertiary: #68c886;
 }
 
 :is(h1, h2, p::first-letter()) {
