@@ -144,7 +144,7 @@ form {
 form :is(input, textarea) {
   width: 100%;
   border-radius: .6rem;
-  background: var(--secondary);
+  background: var(--tertiary);
   color: var(--primary);
   appearance: none;
 }
