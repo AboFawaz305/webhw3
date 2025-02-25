@@ -11,9 +11,10 @@
 :root {
   font: 16pt "Doomie";
   font: 16pt sans-serif;
-  --primary: #8668c8;
-  --secondary: #68c886;
-  --tertiary: #c88668;
+  --primary: #1E2798;
+  --secondary: #00827c;
+  --bg-color: #01142a;
+  --fg-color: #99eeff;
 }
 
 :is(h1, h2, p::first-letter()) {
@@ -29,13 +30,13 @@ li {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--secondary);
 }
 
 body {
   margin: 0;
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--bg-color);
+  color: var(--fg-color);
   /* Display the body as grid */
   display: grid;
   grid-template-rows: 1fr 12fr 1fr;
@@ -48,14 +49,12 @@ main {
 }
 
 header {
-  position: sticky;
-  top: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: stretch;
-  background: var(--secondary);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--fg-color);
   gap: 1rem;
   padding: 0 1rem;
 }
@@ -97,16 +96,16 @@ nav li a {
 
 nav li a:hover {
   text-decoration: none;
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--secondary);
+  color: var(--fg-color);
 }
 
 footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background: var(--secondary);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--fg-color);
   align-items: center;
   padding: 1.2rem 2.4rem;
 }
@@ -142,11 +141,13 @@ form {
 }
 
 form :is(input, textarea) {
-  width: 100%;
-  border-radius: .6rem;
-  background: var(--tertiary);
-  color: var(--secondary);
   appearance: none;
+  width: 100%;
+  border-radius: 5px;
+  border: 2pt var(--secondary) solid;
+  padding: .5rem;
+  background: var(--primary);
+  color: var(--fg-color);
 }
 
 form :is(input, textarea):focus() {
