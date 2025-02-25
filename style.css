@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Domine:wght@400..700&display=swap');
-
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -102,8 +100,7 @@ nav li a {
 
 nav li a:hover {
   text-decoration: none;
-  background: var(--secondary);
-  color: var(--fg-color);
+  animation: pulse 1s infinite;
 }
 
 footer {
@@ -113,7 +110,7 @@ footer {
   background: var(--primary);
   color: var(--fg-color);
   align-items: center;
-  padding: 1.2rem 2.4rem;
+  padding: .6rem 1.2rem;
 }
 
 footer #contact-me {
@@ -129,14 +126,17 @@ footer #contact-me ul li {
 }
 
 footer #contact-me ul li a {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
+  padding: 1rem;
+  animation: pulse 1s infinite
 }
 
 #top-button {
-  padding: 1.rem;
-  text-decoration: underline;
+  padding: 1rem;
+  text-decoration: none;
   color: inherit;
+  animation: pulse 1s infinite;
 }
 
 form {
@@ -185,4 +185,18 @@ form textarea {
 
 .project2 {
   grid-area: xo;
+}
+
+@keyframes pulse {
+  0% {
+    background: inherit;
+  }
+
+  50% {
+    background: var(--secondary)
+  }
+
+  100% {
+    background: inherit;
+  }
 }
