@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Domine:wght@400..700&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -9,8 +9,9 @@
 * NOTE: :root selector represents the root element usually it is the html element
 */
 :root {
-  font: 16pt "Doomie";
-  font: 16pt sans-serif;
+  font-family: "Domine", serif;
+  font-size: 16pt;
+  font-optical-sizing: auto;
   --primary: #1E2798;
   --secondary: #00827c;
   --bg-color: #01142a;
@@ -57,6 +58,11 @@ header {
   color: var(--fg-color);
   gap: 1rem;
   padding: 0 1rem;
+  text-transform: capitalize;
+}
+
+header h1 {
+  align-self: center;
 }
 
 header img {
@@ -138,6 +144,7 @@ form {
   flex-direction: column;
   padding: 0 20vw;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 form :is(input, textarea) {
@@ -150,12 +157,32 @@ form :is(input, textarea) {
   color: var(--fg-color);
 }
 
-form :is(input, textarea):focus() {
-  appearance: none;
-  font-family: inherit;
+form textarea {
+  height: 30vh;
 }
 
 #submit {
   width: 20%;
   margin-left: 80%;
+}
+
+.projects {
+  display: grid;
+  grid-template-areas: "pb ."
+    ". xo";
+  gap: 5rem;
+}
+
+:is(project1, project2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project1 {
+  grid-area: pb;
+}
+
+.project2 {
+  grid-area: xo;
 }
