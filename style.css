@@ -21,7 +21,7 @@
 }
 
 h1 {
-  text-shadow: var(--primary) 1px 1px;
+  text-shadow: var(--secondary) 2px 3px;
 }
 
 li {
